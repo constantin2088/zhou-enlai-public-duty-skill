@@ -1,11 +1,4 @@
-# Agent instructions
-
-This is a developer template, not an Agent Skill. Do not add a root `SKILL.md` here.
-
-- Keep generators dependency-free and deterministic.
-- The generated Skill `name` must match its parent directory.
-- Never infer a personality or claim of a historical figure from template variables.
-- Do not bypass placeholder checks just to mark an unfinished Skill as released.
-- Ensure templates warn about exact historical quotations and modern events.
-- Add a regression test for changes to generator behavior.
-- Run `python -m unittest discover -s tests -v` before merging.
+# 维护规范
+保留用户授权范围；保护原有文件。资料变更提供核查链接和定位，不编引文。现代步骤标明项目转译。保持根 SKILL.md 名称与文件夹一致。
+运行完整性检查、单元测试和链接检查；行为评测未执行则如实标注。直接发布公开 Skill，不要求 GitHub Releases。
+系列目录只维护总仓库 catalog/skills.json；README 受管理区块由同步器生成。

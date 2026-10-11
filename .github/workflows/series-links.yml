@@ -19,12 +19,12 @@ jobs:
       - name: Generate only the managed series block
         env:
           REPOSITORY: ${{ github.event.repository.name }}
-        run: python scripts/sync_series.py --slug "$REPOSITORY" --snapshot templates/series-catalog.json.tmpl
+        run: python scripts/sync_series.py --slug "$REPOSITORY"
       - name: Commit if changed
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md templates/series-catalog.json.tmpl
+          git add README.md
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh series links from canonical catalog'
             git push
